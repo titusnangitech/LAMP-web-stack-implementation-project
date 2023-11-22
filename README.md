@@ -1,4 +1,4 @@
-# **Deployed a LAMP (Linux, Apache, MySQL, PHP) stack website on AWS**
+
 
 
 # STEP 01 - Created and connected to an EC2 instance in the us-east-1 region

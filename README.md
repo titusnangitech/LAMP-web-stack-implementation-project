@@ -1,5 +1,5 @@
 # LAMP-web-stack-implementation-project
-Deployed a LAMP stack website on AWS 
+**Deployed a LAMP stack website on AWS**
 
 # STEP 01
 

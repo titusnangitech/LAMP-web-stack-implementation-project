@@ -1,7 +1,7 @@
 # LAMP-web-stack-implementation-project
-**Deployed a LAMP stack website on AWS**
+**Deployed a LAMP (Linux, Apache, MySQL, PHP or Python, or Perl) stack website on AWS**
 
-# STEP 01
+# STEP 01 - Created and connected an EC2 instance in the us-east-1 region
 
 ![ec2 pic](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/c2cc67f8-31d6-4623-a196-23042e51a6d0)
 
@@ -31,3 +31,9 @@
 - **the ec2 instance been successifully created and running**
 
 ![ec2 is a success](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/a43cc32b-cd97-4e2f-8bf3-6067e6694bf3)
+
+
+-**connected to the EC2 instance using Mobaxterm using the ec2 public IP address**
+
+
+# STEP 02 - Installing Apache web server

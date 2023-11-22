@@ -49,7 +49,7 @@
 - **Install Apache using Ubuntu’s package manager ‘apt’**
 
 ```
-#first update a list of packages in package manager
+#first update a list of packages in the apt package manager
 sudo apt update
  ```
 
@@ -62,3 +62,35 @@ sudo apt install apache2
 ```
 
 ![install apache](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/04d52075-a25e-4aff-9145-44ba34c6bf3d)
+
+```
+ #To verify that apache2 is running as a Service in our OS, enter the following command
+sudo systemctl status apache2
+```
+
+![verify that apche is running](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/ef385ec3-312d-4d54-b169-c96bcbe5d491)
+
+```
+**server is running and can be accessed locally using both localhost and IP address**
+curl http://localhost:80
+or
+ curl http://127.0.0.1:80
+```
+
+![test using curl local host](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/7a56724d-e506-4122-aac4-ef32c957264c)
+
+** **
+
+![curl using ip address](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/c92e0469-8a3a-447b-b97f-37342707ad8b)
+
+
+```
+** testing how Apache HTTP server can respond to requests from the Internet. Opening a web browser of my choice and to access following url**
+http://<Public-IP-Address>:80
+```
+
+**The URL in browser can also work if i had not specified the port number since all web browsers use port 80 by default. I can see the following page, to confirm that my web server is correctly installed and accessible through my firewall**
+
+**Apache Ubuntu Default Page displayed**
+
+![apache displayed](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/e44cd379-5ba7-4951-aa86-b7227327b53f)

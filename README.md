@@ -164,7 +164,7 @@ apt install php libapache2-mod-php php-mysql
 ![install PHP component](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/3278cc01-2f70-4f60-ab57-e9d9c1d839cd)
 
 
-- **Once the installation is finished, i ran the following command to confirm your PHP version:
+- **Once the installation is finished, i ran the following command to confirm my PHP version:
 ```
 php -v
 ```

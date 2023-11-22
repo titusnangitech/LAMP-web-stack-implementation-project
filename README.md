@@ -48,13 +48,17 @@
 
 - **Install Apache using Ubuntu’s package manager ‘apt’**
 
- #update a list of packages in package manager
+```
+#first update a list of packages in package manager
 sudo apt update
+ ```
 
 ![run apt update](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/abbcd97a-0f79-431a-8e6d-8d88d75ae57b)
 
 
+```
 #run apache2 package installation
 sudo apt install apache2
+```
 
 ![install apache](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/04d52075-a25e-4aff-9145-44ba34c6bf3d)

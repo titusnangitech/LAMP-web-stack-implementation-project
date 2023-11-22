@@ -3,9 +3,10 @@ Deployed a LAMP stack website on AW
 
 ![ec2 pic](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/c2cc67f8-31d6-4623-a196-23042e51a6d0)
 
-![ec2 using Ubuntu Server 20 04 LTS (HVM)](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/b1dac692-f7e4-442b-aee8-7bcb6e7eb759)
+- Selected the us-east-1 region and launched a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM) launch EC2
 
 ![created an ec2 with an ami of ubuntu](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/94e8c5b3-0d2b-4c37-9782-4eedc5328b3d)
+
 ![choose the  Ubuntu Server 20 04 LTS (HVM)](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/fa6ddf5b-0e14-43e4-a0b2-9fd9e2d1ba93)
 ![choose the t2 micro type](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/046148d2-ab8b-42f9-8a02-f3135fda948f)
 ![new sg with new inboud rules](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/71bdcce5-497a-4414-947b-831b1f0b9fe0)

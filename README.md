@@ -44,4 +44,17 @@
   
 ![connected into ubuntu](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/f1f8bc9e-653c-401b-a4f7-4892cab8c7b1)
 
-# STEP 02 - Installing Apache web server
+# STEP 02 - Installing Apache web server and Updating the firewall
+
+- **Install Apache using Ubuntu’s package manager ‘apt’**
+
+ #update a list of packages in package manager
+sudo apt update
+
+![run apt update](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/abbcd97a-0f79-431a-8e6d-8d88d75ae57b)
+
+
+#run apache2 package installation
+sudo apt install apache2
+
+![install apache](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/04d52075-a25e-4aff-9145-44ba34c6bf3d)

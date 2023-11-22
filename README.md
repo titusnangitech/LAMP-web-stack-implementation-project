@@ -33,7 +33,15 @@
 ![ec2 is a success](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/a43cc32b-cd97-4e2f-8bf3-6067e6694bf3)
 
 
--**connected to the EC2 instance using Mobaxterm using the ec2 public IP address**
+- **populated Mobaxterm with ec2 public IP address, username and key pair details to connect to the EC2 instance**
 
+  
+![mobaxterm populated with details](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/f35b59f3-52d2-4720-9146-23dc0aee0864)
+
+
+- **connected successfully into the EC2 instance using Mobaxterm**
+
+  
+![connected into ubuntu](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/f1f8bc9e-653c-401b-a4f7-4892cab8c7b1)
 
 # STEP 02 - Installing Apache web server

@@ -150,3 +150,15 @@ mysql> exit
 ```
 
 ![mysecure installation](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/70089ea2-b4e3-4547-adab-d840555241ee)
+
+# STEP 03 - Installing PHP 
+
+**I have Apache installed to serve my content and MySQL installed to store and manage my data. PHP is the component of my setup that will process code to display dynamic content to the end user. In addition to the php package, i’ll need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. I’ll also need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies**
+
+**To install these 3 packages at once, will run:**
+
+```
+apt install php libapache2-mod-php php-mysql
+```
+
+![install PHP component](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/3278cc01-2f70-4f60-ab57-e9d9c1d839cd)

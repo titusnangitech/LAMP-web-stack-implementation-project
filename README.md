@@ -1,7 +1,7 @@
-# LAMP-web-stack-implementation-project
-**Deployed a LAMP (Linux, Apache, MySQL, PHP or Python, or Perl) stack website on AWS**
+# **Deployed a LAMP (Linux, Apache, MySQL, PHP or Python, or Perl) stack website on AWS**
 
-# STEP 01 - Created and connected an EC2 instance in the us-east-1 region
+
+# STEP 01 - Created and connected to an EC2 instance in the us-east-1 region
 
 ![ec2 pic](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/c2cc67f8-31d6-4623-a196-23042e51a6d0)
 

@@ -44,7 +44,7 @@
 
   ```
   sudo -i
-  ````
+  ```
   
 
  ![switch to root with thesudo command](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/fb3e0696-c8dd-463d-955e-e791864e2fe3)

@@ -256,8 +256,7 @@ http://54.88.16.160:80
 
 # STEP 06 Enable PHP on website
 
--**With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page.
-
+- **With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page.
 In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:**
 
 ```
@@ -273,24 +272,21 @@ vim /etc/apache2/mods-enabled/dir.conf
 </IfModule>
 ```
 
--**After saving and closing the file, you will need to reload Apache so the changes take effect:**
+- **After saving and closing the file, you will need to reload Apache so the changes take effect:**
 
 ```
 systemctl reload apache2
 ```
 
--**Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server.
-
-Now that you have a custom location to host your website’s files and folders, we’ll create a PHP test script to confirm that Apache is able to handle and process requests for PHP files.
-
-Create a new file named index.php inside your custom web root folder:**
+- **Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server. 
+   Create a new file named index.php inside your custom web root folder:**
 
 ```
 vim /var/www/projectlamp/index.php
 ```
 
 
--**This will open a blank file. Add the following text, which is valid PHP code, inside the file:**
+- **This will open a blank file. Add the following text, which is valid PHP code, inside the file:**
 
 ```
 <?php
@@ -298,7 +294,7 @@ phpinfo();
 ```
 ![last commands](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/7f52b60c-7fc2-49d4-ba48-da89b8304beb)
 
--**When you are finished, save and close the file, refresh the page and you will see a page similar to this:**
+- **When you are finished, save and close the file, refresh the page and you will see a page similar to this:**
 
 ![correct php server display](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/78cfb033-c42d-4491-a40a-671df5d1a58d)
 

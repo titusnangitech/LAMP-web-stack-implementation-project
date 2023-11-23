@@ -300,7 +300,7 @@ phpinfo();
 ![correct php server display](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/78cfb033-c42d-4491-a40a-671df5d1a58d)
 
 
--**After checking the relevant information about my PHP server through that page displayed, it’s best to remove the file I have created as it contains sensitive information about my PHP environment and my Ubuntu server. I used the following command to do so.**
+- **After checking the relevant information about my PHP server through that page displayed, it’s best to remove the file I have created as it contains sensitive information about my PHP environment and my Ubuntu server. I used the following command to do so.**
 
 
 ```

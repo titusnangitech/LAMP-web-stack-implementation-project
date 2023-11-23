@@ -151,7 +151,7 @@ mysql> exit
 
 ![mysecure installation](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/70089ea2-b4e3-4547-adab-d840555241ee)
 
-# STEP 03 - Installing PHP 
+# STEP 04 - Installing PHP 
 
 - **I have Apache installed to serve my content and MySQL installed to store and manage my data. PHP is the component of my setup that will process code to display dynamic content to the end user. In addition to the php package, i’ll need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. I’ll also need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies**
 
@@ -164,8 +164,163 @@ apt install php libapache2-mod-php php-mysql
 ![install PHP component](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/3278cc01-2f70-4f60-ab57-e9d9c1d839cd)
 
 
-- **Once the installation is finished, i ran the following command to confirm my PHP version:
+- **Once the installation is finished, i ran the following command to confirm my PHP version:**
 ```
 php -v
 ```
 ![php version](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/ef834a31-6dd3-4ca6-8934-fb2e4481f5d4)
+
+# STEP 05 - Creating a Virtual Hosts for my website using Apache
+
+-**Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory. We will leave this configuration as is and will add our own directory next next to the default one.
+
+Create the directory for projectlamp using ‘mkdir’ command as follows:**
+
+```
+mkdir /var/www/projectlamp
+```
+
+- **Next, assign ownership of the directory with your current system user:**
+  
+```
+chown -R $USER:$USER /var/www/projectlamp
+```
+
+- **Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor. Here, we’ll be using vi or vim (They are the same by the way):**
+
+```
+vi /etc/apache2/sites-available/projectlamp.conf
+```
+
+- **This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:**
+
+```
+<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+- **You can use the ls command to show the new file in the sites-available directory**
+
+```
+ls /etc/apache2/sites-available
+```
+
+- **You will see something like this;**
+
+```
+000-default.conf  default-ssl.conf  projectlamp.conf
+```
+- **You can now use a2ensite command to enable the new virtual host:**
+
+```
+a2ensite projectlamp
+```
+
+- **You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type**
+
+```
+a2dissite 000-default
+```
+
+-**To make sure your configuration file doesn’t contain syntax errors, run:**
+
+```
+apache2ctl configtest
+```
+
+-**Finally, reload Apache so these changes take effect:**
+
+```
+systemctl reload apache2
+```
+
+-**Your new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected**
+
+```
+echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) '54.88.16.160' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+```
+
+-**Now go to your browser and try to open your website URL using IP address.If you see the text from ‘echo’ command you wrote to index.html file, then it means your Apache virtual host is working as expected.**
+
+```
+http://54.88.16.160:80
+```
+
+![step 5](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/b157d42c-0880-499c-ab48-bb6f191453d0)
+
+# STEP 06 Enable PHP on website
+
+-**With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page.
+
+In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:**
+
+```
+vim /etc/apache2/mods-enabled/dir.conf
+```
+
+```
+<IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+```
+
+-**After saving and closing the file, you will need to reload Apache so the changes take effect:**
+
+```
+systemctl reload apache2
+```
+
+-**Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server.
+
+Now that you have a custom location to host your website’s files and folders, we’ll create a PHP test script to confirm that Apache is able to handle and process requests for PHP files.
+
+Create a new file named index.php inside your custom web root folder:**
+
+```
+vim /var/www/projectlamp/index.php
+```
+
+
+-**This will open a blank file. Add the following text, which is valid PHP code, inside the file:**
+
+```
+<?php
+phpinfo();
+```
+![last commands](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/7f52b60c-7fc2-49d4-ba48-da89b8304beb)
+
+-**When you are finished, save and close the file, refresh the page and you will see a page similar to this:**
+
+![correct php server display](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/78cfb033-c42d-4491-a40a-671df5d1a58d)
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  

@@ -62,7 +62,6 @@
 
 - **first update a list of packages in the apt package manager**
 ```
-first update a list of packages in the apt package manager
 apt update
  ```
 

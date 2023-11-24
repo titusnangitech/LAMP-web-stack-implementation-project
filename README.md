@@ -58,9 +58,8 @@
 
 # STEP 02 - Installing Apache web server and Updating the firewall
 
-- **Install Apache using Ubuntu’s package manager ‘apt’**
+- **Install Apache using Ubuntu’s package manager ‘apt’. First update a list of packages in the apt package manager **
 
-- **first update a list of packages in the apt package manager**
 ```
 apt update
  ```

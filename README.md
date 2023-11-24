@@ -39,6 +39,11 @@
 ![mobaxterm populated with details](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/f35b59f3-52d2-4720-9146-23dc0aee0864)
 
 
+ - **connected successfully into the EC2 instance using Mobaxterm**
+
+   
+![connected into ubuntu](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/f1f8bc9e-653c-401b-a4f7-4892cab8c7b1)
+
 
 - **Switch from ubuntu user to root user**
 
@@ -50,10 +55,6 @@
  ![switch to root with thesudo command](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/fb3e0696-c8dd-463d-955e-e791864e2fe3)
  
  
- - **connected successfully into the EC2 instance using Mobaxterm**
-
-   
-![connected into ubuntu](https://github.com/titusnangitech/LAMP-web-stack-implementation-project/assets/128609800/f1f8bc9e-653c-401b-a4f7-4892cab8c7b1)
 
 # STEP 02 - Installing Apache web server and Updating the firewall
 
@@ -61,6 +62,7 @@
 
 - **first update a list of packages in the apt package manager**
 ```
+first update a list of packages in the apt package manager
 apt update
  ```
 
